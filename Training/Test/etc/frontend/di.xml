@@ -3,7 +3,12 @@
     <type name="Magento\Catalog\Controller\Product\View">
         <plugin name="training_test_product" type="Training\Test\Plugin\Controller\Product\View" />
     </type>
+
     <type name="Magento\Catalog\Block\Product\View\Description">
         <plugin name="product-view-description-plugin" type="Training\Test\Plugin\Block\Product\View\Description" />
+    </type>
+
+    <type name="Magento\Catalog\Block\Product\View\Attributes">
+        <plugin name="product-view-description-plugin" type="Training\Test\Plugin\Block\Product\View\Attributes" />
     </type>
 </config>
