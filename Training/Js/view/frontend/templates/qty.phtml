@@ -1,0 +1,24 @@
+<?php if ($block->getProduct()->getTypeId() == 'simple'): ?>
+    <div data-bind="scope: 'qtyProduct'">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "qtyProduct": {
+                        "component": "Training_Js/js/qty",
+                         "config": {
+                                "template": "Training_Js/qty",
+                                "url": <?= json_encode($block->getUrl('training_js/qty/index')) ?>,
+                                "id": <?= $block->getProduct()->getId() ?>
+                         }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<?php endif; ?>
+
