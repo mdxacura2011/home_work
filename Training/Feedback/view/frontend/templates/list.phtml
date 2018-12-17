@@ -6,7 +6,11 @@
                 <span><?= __('Add Feedback') ?></span>
             </button>
         </div>
-        <?= $gf = $block->getPaginationHtml() ?>
+        <div class="feedback-static">
+            <p><?= __('Total number of submitted feedbacks: %1', $block->getAllFeedbackNumber()) ?></p>
+            <p><?= __('Total number of active feedbacks: %1', $block->getActiveFeedbackNumber()) ?></p>
+        </div>
+        <?= $block->getPageHtml() ?>
     </div>
     <div class="feedback-list">
         <?php foreach ($block->getCollection() as $feedback): ?>
@@ -20,6 +24,6 @@
         <?php endforeach; ?>
     </div>
     <div class="toolbar">
-        <?= $block->getPaginationHtml() ?>
+        <?= $block->getPageHtml() ?>
     </div>
 </div>
