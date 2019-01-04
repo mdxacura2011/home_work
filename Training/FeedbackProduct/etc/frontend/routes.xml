@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="training_feedback_product" frontName="feedback_product">
+            <module name="Training_FeedbackProduct" />
+        </route>
+        <route id="training_feedback">
+            <module name="Training_FeedbackProduct" before="Training_Feedback" />
+        </route>
+    </router>
+</config>
