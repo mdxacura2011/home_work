@@ -26,9 +26,9 @@ class Save extends \Magento\Framework\App\Action\Action
         if ($post = $this->getRequest()->getPostValue()) {
             try {
                 $this->validatePost($post);
-                $fedback = $this->feedbackFactory->create();
-                $fedback->setData($post);
-                $this->feedbackResource->save($fedback);
+                $feedback = $this->feedbackFactory->create();
+                $feedback->setData($post);
+                $this->feedbackResource->save($feedback);
                 $this->messageManager->addSuccessMessage(__('Thank you for your feedback'));
             } catch (\Exception $e) {
                 $this->messageManager->addErrorMessage(__('An error occurred while processing your form. Please try again later.'));
